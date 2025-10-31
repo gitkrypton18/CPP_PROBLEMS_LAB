@@ -12,6 +12,7 @@ int main() {
         cin >> a[i];
 
     int max1 = a[0], max2 = -1e9;   // initialize max and second max
+    /// here 1e9 is the smallest number we can conisder
 
     for(int i = 1; i < n; i++) {
         if(a[i] > max1) {
