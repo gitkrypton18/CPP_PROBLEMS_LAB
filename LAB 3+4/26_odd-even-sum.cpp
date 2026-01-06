@@ -3,22 +3,20 @@
 using namespace std;
 
 int main() {
-    int n, sum_odd, sum_even;
-    cout << "Enter the value of n: ";
-    cin >> n;
-    int k = (n - 1) / 2;
-    int l = n / 2;
-    
-    if (n % 2 == 0) {
-        sum_odd = (n - 1) * (n - 1);
-        sum_even = l * (l + 1);
-    } else {
-        sum_odd = n * n;
-        sum_even = k * (k + 1);
+  int n, sum_odd = 0, sum_even = 0;
+  cout << "Enter the value of n: ";
+  cin >> n;
+
+  for (int i = 1; i <= n; i++) {
+    if (i % 2 == 0) {
+      sum_even += i;
+      continue;
     }
+    sum_odd += i;
+  }
 
-    cout << "The sum of all odd numbers between 1 and n is " << sum_odd << endl;
-    cout << "The sum of all even numbers between 1 and n is " << sum_even << endl;
+  cout << "The sum of all odd numbers between 1 and n is " << sum_odd << endl;
+  cout << "The sum of all even numbers between 1 and n is " << sum_even << endl;
 
-    return 0;
+  return 0;
 }
